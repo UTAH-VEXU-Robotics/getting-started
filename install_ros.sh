@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 #set log
 echo "starting install ros log" > ~/install_ros_log.txt
@@ -13,8 +13,8 @@ curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE
 echo "updating deps and installing" > ~/install_ros_log.txt
 
 sudo apt update
-sudo apt upgrade
-sudo apt install ros-melodic-desktop-full
+sudo apt -y upgrade
+sudo apt -y install ros-melodic-desktop-full
 
 #configure ros
 echo "configuring ros" > ~/install_ros_log.txt
@@ -26,11 +26,10 @@ source /opt/ros/melodic/setup.bash
 #ros dependancies
 echo "installing dependancies" > ~/install_ros_log.txt
 
-sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt -y install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 sudo rosdep init
 rosdep update
 
 chmod +x install_other_things.sh
 source install_other_things.sh
-
 
