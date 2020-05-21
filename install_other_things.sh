@@ -4,6 +4,7 @@
 sudo apt -y install ros-melodic-ros-tutorials
 sudo apt -y install ros-melodic-realsense2-camera
 sudo apt -y install ros-melodic-realsense2-description
+sudo apt -y install snap snapd
 
 #setup for configuring other things
 cd ~/catkin/src
@@ -24,6 +25,3 @@ source devel/setup.bash
 roscore &
 roslaunch cv camera.launch &
 roslaunch gazeboSimulation vexworld.launch &
-
-
-
