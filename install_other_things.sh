@@ -8,6 +8,7 @@ sudo apt -y install snap snapd
 
 #setup for configuring other things
 cd ~/catkin/src
+git config --global credential.helper store
 
 #gazebo simulation
 git clone https://github.com/UTAH-VEXU-Robotics/gazeboSimulation
