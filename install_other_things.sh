@@ -3,8 +3,13 @@
 #installing other things
 sudo apt -y install ros-melodic-ros-tutorials
 sudo apt -y install ros-melodic-realsense2-camera
-sudo apt -y install ros-melodic-realsense2-description
+sudo apt -y install ros-melodic-realsense2-description ros-melodic-joy
 sudo apt -y install snap snapd
+
+#realsense
+
+
+#cv
 sudo apt -y install python-pip
 pip install numpy
 pip install opencv-python
