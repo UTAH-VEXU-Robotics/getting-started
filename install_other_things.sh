@@ -7,7 +7,7 @@ sudo apt -y install ros-melodic-realsense2-description ros-melodic-joy
 sudo apt -y install snap snapd
 
 #realsense
-
+# I forgot to remember the scrips. Ask me
 
 #cv
 sudo apt -y install python-pip
