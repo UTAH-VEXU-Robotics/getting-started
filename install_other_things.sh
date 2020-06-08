@@ -5,6 +5,8 @@ sudo apt -y install ros-melodic-ros-tutorials
 sudo apt -y install ros-melodic-realsense2-camera
 sudo apt -y install ros-melodic-realsense2-description ros-melodic-joy ros-melodic-gazebo-ros
 sudo apt -y install ros-melodic-rqt-common-plugins ros-melodic-rqt-robot-plugins
+sudo apt -y install ros-melodic-controller-manager ros-melodic-teleop-twist-joy ros-melodic-robot-state-publisher ros-melodic-message-to-tf
+
 
 sudo apt -y install snap snapd
 sudo apt -y install blender
