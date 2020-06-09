@@ -15,7 +15,7 @@ sudo apt -y install blender
 # I forgot to remember the scrips. Ask me
 
 #cv
-sudo apt -y install ros-melodic-image-transport ros-melodic-depth-image-proc ros-melodic-image-pipeline
+sudo apt -y install ros-melodic-image-transport ros-melodic-depth-image-proc ros-melodic-image-pipeline ros-melodic-openni-launch
 sudo apt -y install python-pip
 pip install numpy
 pip install opencv-python
