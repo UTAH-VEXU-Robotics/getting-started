@@ -30,6 +30,5 @@ sudo apt -y install python-rosdep python-rosinstall python-rosinstall-generator 
 sudo rosdep init
 rosdep update
 
-chmod +x install_other_things.sh
-source install_other_things.sh
-
+chmod +x ./install_other_things.sh
+sudo sh ./install_other_things.sh
