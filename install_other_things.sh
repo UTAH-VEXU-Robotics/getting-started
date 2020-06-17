@@ -9,7 +9,7 @@ sudo apt -y install ros-melodic-controller-manager ros-melodic-teleop-twist-joy 
 sudo apt -y install  ros-melodic-ros-control  ros-melodic-ros-controllers ros-melodic-gazebo-ros-control
 
 sudo apt -y install snap snapd
-sudo apt -y install blender
+sudo snap install blender --classic
 
 #realsense
 # I forgot to remember the scrips. Ask me
