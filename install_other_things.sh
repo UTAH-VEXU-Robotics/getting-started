@@ -25,7 +25,7 @@ cd ~/catkin/src
 git config --global credential.helper store
 
 #gazebo simulation
-git clone https://github.com/UTAH-VEXU-Robotics/gazeboSimulation
+git clone --recursive https://github.com/UTAH-VEXU-Robotics/gazeboSimulation
 echo "export GAZEBO_MODEL_PATH=~/catkin/src/gazeboSimulation/models:$GAZEBO_MODEL_PATH" >> ~/.bashrc
 echo "export GAZEBO_RESOURCE_PATH=~/catkin/src/gazeboSimulation:$GAZEBO_MODEL_PATH" >> ~/.bashrc
 source ~/.bashrc
@@ -38,5 +38,5 @@ cd ~/catkin
 catkin_make
 source devel/setup.bash
 roscore &
-roslaunch cv camera.launch &
-roslaunch gazeboSimulation vexworld.launch &
+# roslaunch cv camera.launch &
+roslaunch gazeboSimulation changeup.launch &
