@@ -14,5 +14,5 @@ sudo apt -y install git  #git is needed to install this repo
 cd ~/  #make current directory the home directory
 git clone https://github.com/UTAH-VEXU-Robotics/getting-started
 cd getting-started  #clone this git repo
-sudo sh install_ros.sh  #run the ros install script
+sudo sh depend.sh  #run the ros install script
 ```
