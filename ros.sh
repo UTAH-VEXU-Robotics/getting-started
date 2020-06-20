@@ -18,28 +18,24 @@ then
 	sudo apt update
 	sudo apt -y upgrade
 	sudo apt -y install ros-melodic-desktop-full
-	sudo apt -y install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential python-roslaunch
-
-  source ~/.bashrc
-  source /opt/ros/melodic/setup.bash
-
+	
+  echo "Would you like to add to your bashrc? (y | n) default: y"
+  read isBashrc
+  if [ $isBashrc = y ]
+  then
+    echo /opt/ros/melodic/setup.bash >> ~/.bashrc
+    source /opt/ros/melodic/setup.bash >> ~/.bashrc
+  fi
+  if [ $isBashrc = n ]
+  then
+    echo not doing the bashrc thing
+  fi
 fi
 if [ $varname = n ]
 then
 	echo not installing ros
 fi
 
-echo "Would you like to add to your bashrc? (y | n) default: y"
-read isBashrc
-if [ $isBashrc = y ]
-then
-	echo /opt/ros/melodic/setup.bash >> ~/.bashrc
-	source /opt/ros/melodic/setup.bash >> ~/.bashrc
-fi
-if [ $isBashrc = n ]
-then
-  echo not doing the bashrc thing
-fi
 
 echo "would you like to init and update rosdep? (y | n)"
 read isRosdep
@@ -55,7 +51,7 @@ fi
 
 #ros dependancies
 echo installing dependancies
-chmod +x ./install_other_things.sh
-sudo sh ./install_other_things.sh
+chmod +x ./depend.sh
+sudo sh ./depend.sh
 
 echo finished
