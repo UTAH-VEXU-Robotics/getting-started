@@ -16,5 +16,5 @@ mkdir catkin; cd catkin
 mkdir src; cd src
 git clone https://github.com/UTAH-VEXU-Robotics/getting-started
 cd getting-started  #clone this git repo
-sudo sh ros.sh  #run the ros install script
+sh ros.sh  #run the ros install script
 ```
