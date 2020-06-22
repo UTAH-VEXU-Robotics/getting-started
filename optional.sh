@@ -9,20 +9,20 @@ then
   sudo apt -y install snap snapd
 
   echo install blender
-  sudo snap install blender --classic
+  snap install blender --classic
 
   echo install git kraken
-  sudo snap install gitkraken --classic
+  snap install gitkraken --classic
 
   echo "would you like to install programs that don't necessairly relate to utah robotics? (y | n)"
   read isOther
   if [ $isOther = y ]
   then
     echo install discord
-    sudo snap install discord --classic
+    snap install discord
 
     echo install spotify
-    sudo snap install spotify --classic
+    snap install spotify
 
     echo install OBS
     sudo apt -y install ffmpeg
