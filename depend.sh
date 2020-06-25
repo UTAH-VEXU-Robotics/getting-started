@@ -44,16 +44,16 @@ then
     fi
   fi
 
-  echo rqt
+  echo rqt and rviz
   echo ""
   rqtdep () {
-    sudo apt-get -y -q install ros-melodic-rqt ros-melodic-rqt-common-plugins ros-melodic-rqt-robot-plugins
-    echo installed rqt stuff
+    sudo apt-get -y -q install ros-melodic-rqt ros-melodic-rqt-common-plugins ros-melodic-rqt-robot-plugins ros-melodic-urdf-tutorial
+    echo installed rqt and rviz stuff
   }
   if (! grep -q ros-melodic-rqt-robot-plugins installed.txt ); then
     rqtdep
   else
-    echo "would you like to install rqt dependancies? (y | n)"
+    echo "would you like to install rqt and rviz dependancies? (y | n)"
     read isrqt
     if [ $isrqt = y ]; then
       rqtdep
@@ -77,9 +77,25 @@ then
     fi
   fi
 
+  echo navigation
+  navigationdep () {
+    sudo apt-get -y -q install ros-melodic-map-server ros-melodic-navigation-tutorials ros-melodic-navigation ros-melodic-amcl
+    echo installed navigation stuff
+  }
+  echo ""
+  if (! grep -q ros-melodic-navigation-tutorials installed.txt ); then
+      navigationdep
+  else
+    echo "would you like to install navigation dependancies? (y | n)"
+    read isgazebo
+    if [ $isgazebo = y ]; then
+      navigationdep
+    fi
+  fi
+
   echo gazebo
   gazebodep () {
-    sudo apt-get -y -q install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs
+    sudo apt-get -y -q install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-joint-state-publisher-gui
     echo installed gazebo stuff
   }
   echo ""
