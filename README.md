@@ -12,7 +12,9 @@ This is a basic repository for getting started with ROS on debian 18.04 based GN
 ```bash
 sudo apt -y install git  #git is needed to install this repo
 cd ~/  #make current directory the home directory
+mkdir catkin; cd catkin
+mkdir src; cd src
 git clone https://github.com/UTAH-VEXU-Robotics/getting-started
 cd getting-started  #clone this git repo
-sudo sh depend.sh  #run the ros install script
+sh ros.sh  #run the ros install script
 ```
