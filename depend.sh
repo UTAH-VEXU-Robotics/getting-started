@@ -79,7 +79,7 @@ then
 
   echo navigation
   navigationdep () {
-    sudo apt-get -y -q install ros-melodic-map-server ros-melodic-navigation-tutorials ros-melodic-navigation ros-melodic-amcl
+    sudo apt-get -y -q install ros-melodic-map-server ros-melodic-navigation-tutorials ros-melodic-navigation ros-melodic-amcl ros-melodic-teb-local-planner
     echo installed navigation stuff
   }
   echo ""
