@@ -80,7 +80,6 @@ then
   echo navigation
   navigationdep () {
     sudo apt-get -y -q install ros-melodic-map-server ros-melodic-navigation-tutorials ros-melodic-navigation ros-melodic-amcl ros-melodic-teb-local-planner
-    python -m pip install -U pygame --user
     echo installed navigation stuff
   }
   echo ""
@@ -96,7 +95,7 @@ then
 
   echo gazebo
   gazebodep () {
-    sudo apt-get -y -q install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-joint-state-publisher-gui
+    sudo apt-get -y -q install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-joint-state-publisher-gui python-pygame
     echo installed gazebo stuff
   }
   echo ""
