@@ -80,6 +80,7 @@ then
   echo navigation
   navigationdep () {
     sudo apt-get -y -q install ros-melodic-map-server ros-melodic-navigation-tutorials ros-melodic-navigation ros-melodic-amcl ros-melodic-teb-local-planner
+    python -m pip install -U pygame --user
     echo installed navigation stuff
   }
   echo ""
