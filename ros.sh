@@ -23,7 +23,7 @@ then
   read isBashrc
   if [ $isBashrc = y ]
   then
-    echo /opt/ros/melodic/setup.bash >> ~/.bashrc
+    echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
     source /opt/ros/melodic/setup.bash >> ~/.bashrc
   fi
   if [ $isBashrc = n ]
