@@ -34,6 +34,13 @@ then
     sudo apt -y install vlc
   fi
 
+  echo "do you want to install pygames? (y | n)"
+  read pygames
+  if [ $pygames = y]
+  then
+    echo sudo apt-get install python-pygame
+  fi
+
   echo "are you michael (y | n)"
   read isMichael
   if [ $isMichael = y ]
