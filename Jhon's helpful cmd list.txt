@@ -1,24 +1,56 @@
-# Terminal Cheat Sheet
+# Jhon's Helpful cmd list/Terminal Cheat Sheet
+# list was made/pasted because Jhon's an idiot who can't remember basic cmds.
+# linux 101
+    pwd         # print working directory
+    ls          # list files in directory
+    cd          # change directory
+    ~           # home directory
+    ..          # up one directory
+    -           # previous working directory
+    help        # get help
+    -h          # get help
+    --help      # get help especially with commands
+    man         # manual
+    cat         # output the contents of a file
+    mkdir       # create new directory
+    open        # open a file with the associated program, a directory with Finder, or a URL with the default web browser
+    ps          # list all running processes
+    kill        # terminate existing process
+    rmd         # permanently delete file
+    rmdir       # remove directory
 
-pwd         # print working directory
-ls          # list files in directory
-cd          # change directory
-~           # home directory
-..          # up one directory
--           # previous working directory
-help        # get help
--h          # get help
---help      # get help
-man         # manual
-cat         # output the contents of a file
-mkdir       # create new directory
-open        # open a file with the associated program, a directory with Finder, or a URL with the default web browser
-ps          # list all running processes
-kill        # terminate existing process
-rmd         # permanently delete file
-rmdir       # remove directory
+# check that files exist
+    # python library
+    $ python -c "import (library)"
+    $ echo $?
+    0                                # (library) module exists in system
 
+    # ros versions
+    $ rosversion -d
+    melodic                          # you have melodic downloaded, also manually check .bashrc
 
+    # gazebo installed (to be fair this is the only option I found)
+    $ which gzserver
+    /usr/bin/gzserver
+    $ which gzclient
+    /usr/bin/gzclient
+
+    # Ubuntu flavor
+    $ lsb_release -a
+    No LSB modules are available.
+    Distributor ID:    Ubuntu
+    Description:    Ubuntu 18.04.4 LTS
+    Release:    18.04
+    Codename:    bionic
+
+    # ROS packages
+    $ rospack list-names          
+                                    # A really long list.
+
+    # ROS topics
+    $ rostopic list
+    $ rostopic echo /topic_name                 -v(erbos) -p(ublisher) -s(ubscriber)
+    $ rostopic info /topic_name
 
 
 
