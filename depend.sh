@@ -10,10 +10,10 @@ then
 
   echo ros
   rosdep () {
-      sudo apt-get -y -q install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential ros-melodic-catkin python-catkin-tools ros-melodic-roslib
+      sudo apt-get -y -q install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential ros-noetic-catkin python-catkin-tools ros-noetic-roslib
       echo installed ros stuff
   }
-  if ! (grep -q ros-melodic-catkin installed.txt); then
+  if ! (grep -q ros-noetic-catkin installed.txt); then
     rosdep
   else
     echo "would you like to install ros dependancies? (y | n)"
@@ -25,7 +25,7 @@ then
 
   echo realsense
   realsensedep () {
-    sudo apt-get -y -q install ros-melodic-realsense2-camera ros-melodic-realsense2-description
+    sudo apt-get -y -q install ros-noetic-realsense2-camera ros-noetic-realsense2-description
     sudo apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key  F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
     sudo add-apt-repository "deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo bionic main" -u
     sudo apt update
@@ -47,10 +47,10 @@ then
   echo rqt and rviz
   echo ""
   rqtdep () {
-    sudo apt-get -y -q install ros-melodic-rqt ros-melodic-rqt-common-plugins ros-melodic-rqt-robot-plugins ros-melodic-urdf-tutorial
+    sudo apt-get -y -q install ros-noetic-rqt ros-noetic-rqt-common-plugins ros-noetic-rqt-robot-plugins ros-noetic-urdf-tutorial
     echo installed rqt and rviz stuff
   }
-  if (! grep -q ros-melodic-rqt-robot-plugins installed.txt ); then
+  if (! grep -q ros-noetic-rqt-robot-plugins installed.txt ); then
     rqtdep
   else
     echo "would you like to install rqt and rviz dependancies? (y | n)"
@@ -63,11 +63,11 @@ then
   echo controlandmessages
   echo ""
   controlandmessagesdep (){
-    sudo apt-get -y -q install ros-melodic-controller-manager ros-melodic-teleop-twist-joy ros-melodic-robot-state-publisher ros-melodic-message-to-tf ros-melodic-joint-state-controller ros-melodic-joy
-    sudo apt-get -y -q install  ros-melodic-ros-control  ros-melodic-ros-controllers
+    sudo apt-get -y -q install ros-noetic-controller-manager ros-noetic-teleop-twist-joy ros-noetic-robot-state-publisher ros-noetic-message-to-tf ros-noetic-joint-state-controller ros-noetic-joy
+    sudo apt-get -y -q install  ros-noetic-ros-control  ros-noetic-ros-controllers
     echo installed controlandmessages stuff
   }
-  if (! grep -q ros-melodic-joy installed.txt ); then
+  if (! grep -q ros-noetic-joy installed.txt ); then
       controlandmessagesdep
   else
     echo "would you like to install controlandmessages dependancies? (y | n)"
@@ -79,11 +79,11 @@ then
 
   echo navigation
   navigationdep () {
-    sudo apt-get -y -q install ros-melodic-map-server ros-melodic-navigation-tutorials ros-melodic-navigation ros-melodic-amcl ros-melodic-teb-local-planner
+    sudo apt-get -y -q install ros-noetic-map-server ros-noetic-navigation-tutorials ros-noetic-navigation ros-noetic-amcl ros-noetic-teb-local-planner
     echo installed navigation stuff
   }
   echo ""
-  if (! grep -q ros-melodic-navigation-tutorials installed.txt ); then
+  if (! grep -q ros-noetic-navigation-tutorials installed.txt ); then
       navigationdep
   else
     echo "would you like to install navigation dependancies? (y | n)"
@@ -95,11 +95,11 @@ then
 
   echo gazebo
   gazebodep () {
-    sudo apt-get -y -q install ros-melodic-gazebo-ros ros-melodic-gazebo-ros-control ros-melodic-gazebo-ros-pkgs ros-melodic-joint-state-publisher-gui python-pygame
+    sudo apt-get -y -q install ros-noetic-gazebo-ros ros-noetic-gazebo-ros-control ros-noetic-gazebo-ros-pkgs ros-noetic-joint-state-publisher-gui python-pygame
     echo installed gazebo stuff
   }
   echo ""
-  if (! grep -q ros-melodic-gazebo-ros-pkgs installed.txt ); then
+  if (! grep -q ros-noetic-gazebo-ros-pkgs installed.txt ); then
       gazebodep
   else
     echo "would you like to install gazebo dependancies? (y | n)"
@@ -130,13 +130,13 @@ then
 
   echo cv depends
   cvdep(){
-    sudo apt-get -y -q install ros-melodic-image-transport ros-melodic-depth-image-proc ros-melodic-image-pipeline ros-melodic-openni-launch
+    sudo apt-get -y -q install ros-noetic-image-transport ros-noetic-depth-image-proc ros-noetic-image-pipeline ros-noetic-openni-launch
     sudo apt-get -y -q install python-pip
     sudo pip install numpy
     sudo pip install opencv-python
     echo installed cv stuff
   }
-  if (! grep -q ros-melodic-image-pipeline installed.txt); then
+  if (! grep -q ros-noetic-image-pipeline installed.txt); then
     cvdep
   else
     echo "would you like to install cv dependancies? (y | n)"
