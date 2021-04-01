@@ -17,14 +17,14 @@ then
 
 	sudo apt update
 	sudo apt -y upgrade
-	sudo apt -y install ros-melodic-desktop-full
-	
+	sudo apt -y install ros-noetic-desktop-full
+
   echo "Would you like to add to your bashrc? (y | n) default: y"
   read isBashrc
   if [ $isBashrc = y ]
   then
-    echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-    source /opt/ros/melodic/setup.bash >> ~/.bashrc
+    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+    source /opt/ros/noetic/setup.bash >> ~/.bashrc
   fi
   if [ $isBashrc = n ]
   then
